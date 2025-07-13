@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-gradient {
+    @apply bg-gradient-to-br from-blue-50 via-white to-indigo-100;
+  }
+  .sticky-header {
+    @apply sticky top-0 z-30;
+  }
+  .card-animate {
+    @apply transition-transform duration-300 hover:scale-[1.02] shadow-lg;
+  }
+  .helper-text {
+    @apply text-xs text-gray-500 mt-1;
+  }
+  .table-zebra tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-5 rounded-lg shadow transition-all duration-200;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg border border-gray-300 shadow-sm transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  .score-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold shadow-sm;
+  }
+  .score-very-high {
+    @apply bg-green-100 text-green-700;
+  }
+  .score-high {
+    @apply bg-blue-100 text-blue-700;
+  }
+  .score-medium {
+    @apply bg-yellow-100 text-yellow-700;
+  }
+  .score-low {
+    @apply bg-gray-200 text-gray-700;
+  }
+  .score-very-low {
+    @apply bg-red-100 text-red-700;
+  }
+  .avatar-circle {
+    @apply w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-lg font-bold text-gray-600 shadow-sm mr-3;
+  }
+  .intent-dot {
+    @apply w-3 h-3 rounded-full inline-block mr-2 align-middle;
+  }
+  .intent-dot-very-high { @apply bg-green-500; }
+  .intent-dot-high { @apply bg-blue-500; }
+  .intent-dot-medium { @apply bg-yellow-400; }
+  .intent-dot-low { @apply bg-gray-400; }
+  .intent-dot-very-low { @apply bg-red-500; }
+  .intent-border-very-high { @apply border-l-4 border-green-500; }
+  .intent-border-high { @apply border-l-4 border-blue-500; }
+  .intent-border-medium { @apply border-l-4 border-yellow-400; }
+  .intent-border-low { @apply border-l-4 border-gray-400; }
+  .intent-border-very-low { @apply border-l-4 border-red-500; }
+  .table-header-sticky {
+    @apply sticky top-0 z-10 bg-gray-50 shadow-sm;
+  }
+  .row-hover {
+    @apply hover:bg-blue-50 transition-shadow duration-200;
+  }
+  .badge-pill {
+    @apply rounded-full px-3 py-1 text-xs font-semibold shadow-sm;
+  }
+} 
